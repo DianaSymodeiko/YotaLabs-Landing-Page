@@ -1,0 +1,262 @@
+@media (min-width: 960px) {
+  .content_container {
+    width: 66.146%;
+  }
+
+  // HEADER
+  .header {
+    margin-bottom: 125px;
+  }
+
+  .header_nav {
+    padding: 70px 70px 0 70px;
+  }
+
+  .logo_link {
+    font: bold 40px $main-font;
+  }
+
+  .logo_icon {
+    margin-right: 50px;
+    width: 68px;
+    height: 60px;
+  }
+
+  .menu-toggle_icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header_description {
+    padding: 0 70px;
+  }
+
+  .header_icon {
+    margin-right: 38px;
+    height: 102px;
+    width: 102px;
+  }
+
+  .header_title {
+    font: bold 73px $main-font;
+    margin-bottom: 120px;
+  }
+
+  .header_subtitle {
+    font: bold 52px/1.23 $main-font;
+  }
+
+  // GOALS SOLUTION
+  .goals_solutution {
+    @include container-width-desktop;
+    @include reset-paddings('hor');
+    margin-bottom: 200px;
+  }
+
+  .solution {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .solution_wrapper {
+    margin-bottom: 0;
+    flex-basis: 43.3%;
+  }
+
+  .solution_title {
+    font: 500 34px $main-font;
+    margin-bottom: 104px;
+
+    &::after {
+      width: 49vw;
+      top: 78px;
+      left: auto;
+      right: -25px;
+    }
+  }
+
+  .solution_description {
+    font: 20px/1.6 $main-font;
+  }
+
+  .solution_video {
+    flex-basis: 55.24%;
+    width: 55%;
+    padding-top: 140px; //зроблено через padding, а не через translateY або top для того, щоб при дуже широких екранах і малій клькості бокового контенту відео не виходило за межі свого контенеру по висоті, а просто його розтягувало
+    transform: translateX(165px);
+  }
+
+  // GOALS OPINION
+  .goals_opinion {
+    @include container-width-desktop;
+    @include reset-paddings('hor');
+    margin-bottom: 184px;
+    order: 0;
+
+    &::after {
+      margin-top: 20%;
+    }
+  }
+
+  .opinion {
+    padding-bottom: 50px;
+
+    &::after {
+      background-image: linear-gradient(147deg, $gradient-color-first, $gradient-color-second);
+    }
+  }
+
+  .opinion_video {
+    width: 70.866%;
+    margin: 0 auto 50px auto;
+  }
+
+  .opinion_description {
+    font: 300 20px/1.6 $main-font;
+    width: 55.118%;
+    letter-spacing: 0.9px;
+    margin: 0 auto;
+  }
+
+  // GOALS EXAMPLES
+  .goals_examples {
+    @include container-width-desktop;
+    @include reset-paddings('hor');
+    margin-bottom: 153px;
+  }
+
+  .examples_slider {
+    .slick-arrow {
+      width: 60px;
+      height: 22px;
+    }
+
+    .slick-prev {
+      background-image: url('../images/icons/desktop-arrow-prev.svg');
+      left: 0;
+    }
+
+    .slick-next {
+      background-image: url('../images/icons/desktop-arrow-next.svg');
+      left: 100px;
+    }
+  }
+
+  .examples_item {
+    display: block !important; //!important this is the only way to make flex slider block
+    overflow: hidden;
+  }
+
+  .examples_image {
+    width: 46.69%;
+    float: left;
+    margin-right: 9.76%;
+    margin-bottom: 5px;
+  }
+
+  .examples_title {
+    margin-bottom: 32px;
+    font: 500 36px/1.28 $main-font;
+    letter-spacing: 3px;
+    order: 0;
+  }
+
+  .examples_description {
+    font: 20px/1.6 $main-font;
+    letter-spacing: 0.9px;
+  }
+
+  .examples_pagination {
+    right: 0;
+  }
+
+  .examples_line {
+    width: 160px;
+    background: linear-gradient(to right, $gradient-color-first, $gradient-color-second);
+  }
+
+  .contacts {
+    padding-bottom: 0;
+    display: flex;
+    align-content: center;
+    background: linear-gradient(147deg, $gradient-color-first, $gradient-color-second);
+  }
+
+  .contacts_content {
+    @include container-width-desktop;
+    @include reset-paddings('hor');
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .suggestion_title {
+    font: 500 52px/1.23 $main-font;
+    margin-bottom: 32px;
+  }
+
+  .suggestion_promise {
+    font: 300 24px $main-font;
+    margin-bottom: 0;
+  }
+
+  .contacts_link {
+    font: 500 28px $main-font;
+    right: 0;
+
+    &::after {
+      width: 150px;
+      height: 4px;
+      left: -50%;
+      bottom: -12px;
+    }
+  }
+
+  .projects_list {
+    flex-direction: row;
+  }
+
+  .projects_item {
+    &:nth-child(odd) .projects_description {
+      padding-right: 100px;
+    }
+
+    &:nth-child(even) .projects_description {
+      text-align: left;
+      padding-left: 100px;
+    }
+  }
+
+  .projects_description {
+    @include reset-paddings('hor');
+    justify-content: flex-end;
+    text-align: right;
+    padding-bottom: 9.3vh;
+  }
+
+  .projects_pointers {
+    font: 300 24px $main-font;
+    margin-bottom: 16px;
+  }
+
+  .projects_names {
+    font: bold 52px $main-font;
+  }
+}
+
+
+@media (min-width: 960px) and (max-width: 1200px) {
+  .suggestion_title {
+    font: 500 32px/1.23 $main-font;
+  }
+
+  .suggestion_promise {
+    font: 300 16px $main-font;
+  }
+
+  .contacts_link {
+    font: 500 20px $main-font;
+  }
+}
